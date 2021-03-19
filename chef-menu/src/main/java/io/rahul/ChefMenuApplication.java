@@ -17,7 +17,7 @@ public class ChefMenuApplication {
 		SpringApplication.run(ChefMenuApplication.class, args);
 	}
 	
-	@Scheduled(cron = "${cron.schedule}")
+	@Scheduled(cron = "*/5 * * * * *")
 	private void generateMenu() {
 		chefMenuGenerator.generate();
 	}
